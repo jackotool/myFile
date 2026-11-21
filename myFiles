@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func fileExists(path string) (bool, error) {
+func FileExists(path string) (bool, error) {
 	_, err := os.Lstat(path)
 	if err != nil {
 		if errors.Is(err, os.ErrNotExist) {
